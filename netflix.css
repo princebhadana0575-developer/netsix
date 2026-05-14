@@ -1,0 +1,355 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main {
+  width: 100%;
+}
+
+.con-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  position: absolute;
+  top: 0;
+  left: 15%;
+  height: 5rem;
+  align-items: center;
+}
+
+.logo {
+  font-size: 3rem;
+  color: red;
+  font-weight: 800;
+  font-family: "Bebas Neue";
+  font-weight: 700;
+  font-style: normal;
+}
+
+.opt {
+  display: flex;
+}
+
+.opt select {
+  background-color: transparent;
+  border: 0.5px solid white;
+  border-radius: 5px;
+  color: whitesmoke;
+  font-size: 1rem;
+  width: 6rem;
+  height: 2.5rem;
+}
+
+.opt button {
+  font-size: 1rem;
+  background-color: red;
+  color: whitesmoke;
+  border: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 6rem;
+  height: 2.5rem;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(Attachments/backgound.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 97%;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15%;
+  border-bottom: 3px solid rgb(56, 56, 211);
+}
+
+@media (max-width: 456px) {
+  .con-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  html {
+    font-size: 13px;
+  }
+
+  .rsnitems p {
+    font-size: 4rem;
+  }
+}
+
+.signin-modal {
+  position: fixed;
+  right: -500px;
+  top: 0px;
+  color: azure;
+  background-color: black;
+  background: linear-gradient(to top, black 50%, red);
+  height: 70vh;
+  width: 20rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.signin-content {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.showmodal {
+  right: 0px;
+}
+
+.content h1 {
+  font-size: 3.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.content .one {
+  font-weight: 800;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content .two {
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.plc {
+  font-size: 1rem;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 1rem 1rem;
+  border: 0.5px solid grey;
+  font-family: Arial, Helvetica, sans-serif;
+  color: azure;
+  width: 25rem;
+}
+
+.getstarte {
+  font-size: 1.8rem;
+  background-color: red;
+  color: whitesmoke;
+  border-radius: 6px;
+  border: none;
+  padding: 0.6rem;
+  transition: 0.3s ease-in;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.content button:hover {
+  transform: scale(1.05);
+}
+
+.movei {
+  width: 100%;
+  border: 2px solid black;
+  background-color: black;
+}
+
+.wall {
+  border: 2px solid black;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.movei h1 {
+  margin: 1.5rem;
+  color: azure;
+}
+
+.mov-sel {
+  cursor: pointer;
+  border: 2px solid black;
+  height:;
+  width: 350px;
+  flex-shrink: 0;
+  margin: 20px 10px;
+  border-radius: 8px;
+  transition: 0.5s ease;
+  object-fit: contain;
+}
+
+.mov-sel:hover {
+  transform: scale(1.05);
+}
+
+.mov-sel img {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.rsn {
+  background-color: black;
+  color: white;
+}
+
+.rsn h1 {
+  padding-left: 2rem;
+  padding: 2rem;
+}
+
+.rsn h2 {
+  padding: 1rem;
+  font-size: 1.8rem;
+}
+
+.rsnbox {
+  border: 2px solid black;
+  display: flex;
+  gap: 10px;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  overflow: scroll;
+  scrollbar-width: none;
+  flex-wrap: wrap;
+}
+
+.rsnitems {
+  color: white;
+  max-width: 250px;
+  min-width: 200px;
+  height: 300px;
+  border: 2px solid;
+  position: relative;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: left;
+  flex-shrink: 0;
+  background: linear-gradient(to bottom, #1f1c18 0%, #8e0e00 100%);
+}
+
+.rsnitems p {
+  font-size: 1rem;
+}
+
+.rsnitems img {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.faq {
+  background-color: black;
+  color: azure;
+}
+
+.faq h1 {
+  text-align: center;
+  color: azure;
+  padding: 2rem 0;
+}
+
+.faqitems {
+  width: 85%;
+  margin: 7px auto;
+  color: white;
+  background-color: rgb(46, 44, 44);
+  font-weight: 100;
+  padding: 0.7rem;
+}
+
+.faqitems h3 {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.faqitems p {
+  max-height: 200px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  transition-duration: 0.5s;
+}
+
+.faqitems p.hide {
+  max-height: 0;
+}
+
+.faqitems h3 span {
+  transition: 0.5s ease;
+  right: 3px;
+  font-size: 2rem;
+}
+
+.rotate {
+  transform: rotate(45deg);
+  transition: 0.5s ease;
+}
+
+.lastitem {
+  background-color: black;
+  display: flex;
+  gap: 1rem;
+
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 5rem;
+}
+
+.last {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}

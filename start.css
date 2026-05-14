@@ -1,0 +1,911 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+html {
+  width: 100vw;
+}
+
+body {
+  background-color: black;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  color: white;
+}
+.allbody {
+  display: flex;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.sidemenu {
+  width: 7%;
+  background: rgba(15, 15, 25, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 999;
+  font-weight: 700;
+}
+
+.sidemenuitems {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 2px;
+  margin-left: 3px;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+
+.sidemenuitems:hover {
+  border-left: 5px solid red;
+  color: red;
+  transform: scale(1.1);
+}
+.sidemenuitems i {
+  font-size: 1rem;
+}
+.active {
+  color: red;
+}
+
+.all {
+  width: 93%;
+
+  margin-left: 7%;
+}
+main {
+  margin-top: 3rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  width: 90vw;
+  position: absolute;
+  background: rgba(15, 15, 25, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
+  z-index: 10000;
+  padding: 2rem;
+}
+
+.red-box {
+  height: 90%;
+  margin-left: 1rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  gap: 1rem;
+}
+
+.red-box img {
+  border-radius: 5px;
+}
+
+.red-box img:hover {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+  transform: scale(1.05);
+}
+
+.logo {
+  font-size: 2rem;
+  color: red;
+  text-shadow: 0 0 15px rgba(255, 59, 92, 0.5);
+  font-weight: 900;
+  font-family: "Bebas Neue";
+
+  font-style: normal;
+  letter-spacing: 1px;
+  margin-right: 3rem;
+}
+.small {
+  display: none;
+}
+
+.opt-bar {
+  display: flex;
+  align-items: center;
+}
+
+.opt-bar a {
+  text-decoration: none;
+  margin: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #d6d6d6;
+  transition: 0.3s;
+}
+
+.opt-bar a:hover {
+  border-bottom: 2px solid red;
+}
+
+.searchbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+  backdrop-filter: blur(8px);
+  margin: 0.5rem;
+}
+.opt {
+  display: flex;
+  gap: 1rem;
+}
+
+.search {
+  background: transparent;
+  border: none;
+  color: aliceblue;
+  height: 20px;
+  width: 100%;
+  padding-left: 5px;
+  outline: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.section {
+  margin-left: 20px;
+}
+.red {
+  color: red;
+  font-weight: 900;
+}
+
+/* HERO */
+
+.herocontainer {
+  width: 100%;
+  display: flex;
+  overflow-x: auto; /* hidden ki jagah auto ya scroll responsive ke liye */
+  scroll-snap-type: x mandatory; /* Slider smooth banane ke liye */
+  scrollbar-width: none;
+}
+
+.hero {
+  margin-top: 3rem;
+  width: 100%; /* 100vw se better hai */
+  height: 70vh; /* Thodi height badha sakte hain better look ke liye */
+  position: relative;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+#video-placeholder {
+  position: absolute; /* Video image ke upar float honi chahiye */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100; /* Isse video sabse upar rahegi */
+  display: none;
+  background: black;
+}
+
+.banner-img-container {
+  position: relative;
+  z-index: 10;
+  transition: opacity 0.3s ease; /* Smoothly gayab hone ke liye */
+}
+/* IMAGE */
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERLAY */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.95) 15%,
+      rgba(0, 0, 0, 0.4) 45%,
+      transparent 70%
+    ),
+    linear-gradient(to top, rgba(0, 0, 0, 1) 5%, transparent 40%);
+}
+
+/* CONTENT */
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 5rem;
+
+  transform: translateY(-50%);
+
+  width: 40rem;
+  color: white;
+
+  z-index: 5;
+}
+
+/* SMALL TITLE */
+
+.top-title {
+  color: #ff2d2d;
+  letter-spacing: 4px;
+  font-size: 1.5rem;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* MAIN TITLE */
+
+.hero-content h1 {
+  font-size: 3rem;
+  line-height: 0.9;
+
+  padding: 15px 0;
+
+  font-weight: 900;
+}
+
+/* DETAILS */
+
+.details {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1rem;
+
+  margin-bottom: 1rem;
+
+  color: #ddd;
+}
+
+.match {
+  color: #46d369;
+  font-weight: bold;
+}
+
+.age {
+  border: 1px solid #777;
+  padding: 2px 7px;
+}
+
+.quality {
+  border: 1px solid #999;
+  padding: 2px 6px;
+
+  border-radius: 4px;
+}
+
+/* DESCRIPTION */
+
+.hero-content p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #ddd;
+  margin-bottom: 2rem;
+}
+
+/* BUTTONS */
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.buttons button {
+  border: none;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+/* PLAY BUTTON */
+
+.play-btn {
+  background: #ff0000;
+  color: white;
+
+  padding: 1rem 2rem;
+
+  font-size: 1.1rem;
+  border-radius: 6px;
+
+  font-weight: bold;
+}
+
+.play-btn:hover {
+  box-shadow: 0 0 20px rgba(255, 2, 2, 0.4);
+  transform: scale(1.05);
+}
+
+/* LIST BUTTON */
+
+.list-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+
+  padding: 1rem 1.9rem;
+
+  font-size: 1.1rem;
+
+  border-radius: 6px;
+}
+
+.list-btn:hover {
+  box-shadow: 0 0 20px rgba(255, 2, 2, 0.4);
+  transform: scale(1.05);
+}
+
+/* INFO BUTTON */
+
+.info-btn {
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: transparent;
+  color: white;
+
+  border: 2px solid rgba(255, 255, 255, 0.5);
+
+  font-size: 22px;
+}
+
+.info-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* RESPONSIVE */
+
+.heading1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 20px 0;
+}
+
+.headings {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.continue-watching {
+  margin-top: 10px;
+  display: flex;
+  overflow: auto;
+  scrollbar-width: none;
+  gap: 5px;
+}
+
+.play {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: end;
+  visibility: hidden;
+}
+
+.play-bton {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 0.8rem;
+}
+
+.play-btn-banner {
+  background: #ff0000;
+  color: white;
+
+  padding: 1rem 2rem;
+
+  font-size: 1.1rem;
+  border-radius: 6px;
+
+  font-weight: bold;
+}
+
+.play-bton button {
+  border: none;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.play-btn p {
+  text-transform: capitalize;
+  font-size: 25px;
+  color: white;
+}
+
+.play-btn button {
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  margin-bottom: 20px;
+  border: none;
+}
+
+.play-btn button:hover {
+  background-color: #181818;
+  border: 2px solid whitesmoke;
+  color: whitesmoke;
+}
+.Continue-box {
+  width: 500px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  margin: 10px;
+  transition: 0.5s ease;
+  position: relative;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.Continue-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+.history {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.05));
+
+  display: flex;
+  align-items: end;
+
+  padding: 20px;
+
+  opacity: 0;
+  transition: 1s ease;
+}
+
+/* hover parent pe */
+.Continue-box:hover .history {
+  opacity: 1;
+}
+
+.history-content {
+  width: 100%;
+  transform: translateY(35px);
+  transition: 0.4s ease;
+}
+
+.Continue-box:hover .history-content {
+  transform: translateY(0);
+}
+
+.history-content h2 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.history-content h5 {
+  margin-bottom: 0.4rem;
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+}
+
+.btns button {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  backdrop-filter: blur(10px);
+
+  font-size: 0.8rem;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btns button:hover {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+
+  transform: scale(1.08);
+}
+
+.Continue-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.end-img {
+  display: flex;
+  justify-content: center;
+}
+
+.end-img img {
+  width: 30%;
+}
+
+.end-box {
+  border: 2px solid yellowgreen;
+  border-radius: 10px;
+  padding: 30px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+  gap: 10px;
+  margin: auto;
+}
+
+.end {
+  text-align: center;
+  color: grey;
+  margin-bottom: 50px;
+}
+
+.end-box p {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+.end-box h1 {
+  font-size: 2rem;
+}
+
+/* Container styling */
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  /* Taaki cards next line mein aa sakein */
+  gap: 3rem;
+  padding: 3rem;
+  background-color: b(10, 10, 10);
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  z-index: 1;
+  overflow-y: visible;
+  overflow-x: auto;
+}
+
+/* Har card ki styling */
+.item {
+  width: 300px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  z-index: 0;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+/* Hover effect */
+.item:hover {
+  transform: scale(1.2);
+  z-index: 999;
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+/* Panel hidden by default */
+.panel {
+  display: none;
+  position: absolute;
+  /* Layout shift rokne ke liye */
+  top: 100%;
+  /* Image ke thik niche se shuru hoga */
+  left: 0;
+  width: 100%;
+  /* Card jitni hi width rahegi */
+  background: linear-gradient(135deg, #2b124c, #1a1a2e, #0f0f1a);
+  z-index: 5;
+  /* Taaki niche wali row ke upar dikhe */
+  border-radius: 0 0 4px 4px;
+
+  padding: 1rem;
+  height: 90px;
+  box-shadow: 5px 5px 20px rgba(168, 85, 247, 0.2);
+  transform: scale(1.04);
+}
+
+.item:hover .panel {
+  display: block;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Buttons inside panel */
+.pnl-btn {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 8px;
+}
+
+.pnl-btn button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  padding: 8px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: 0.3s all ease;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.pnl-btn button:hover {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+  transform: scale(1.05);
+}
+
+/* Info and Category styling */
+.info {
+  font-size: 0.7rem;
+  margin-bottom: 5px;
+  color: #e5e5e5;
+}
+
+.category {
+  margin: 2px;
+  font-size: 0.5rem;
+  color: #808080;
+}
+
+.banner {
+  display: block;
+  margin-top: 5vh;
+
+  width: 80%;
+  position: fixed;
+  top: -500vh;
+  left: 10%;
+  right: 10;
+  background-color: #000000;
+  margin: auto;
+  z-index: 999;
+  transition: 0.5s all ease;
+  scrollbar-width: none;
+  height: 90vh;
+  /* Ya koi specific height */
+  overflow-y: scroll;
+}
+
+.banner-img {
+  background-color: #181818;
+  height: 100%;
+  position: relative;
+  object-fit: contain;
+}
+
+.banner-img img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+
+.banner-btn {
+  position: absolute;
+  bottom: 10px;
+  z-index: 1000;
+  left: 20px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cross {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #000000;
+  padding: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s all;
+  border-radius: 50%;
+  font-size: 2rem;
+  z-index: 1000;
+}
+
+.cross:hover {
+  cursor: pointer;
+  border: 1.5px solid white;
+}
+
+.banner-btn button {
+  cursor: pointer;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: 0.3s all ease-in;
+}
+
+.bnbtn {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.descriptions {
+  background-color: #181818;
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#match {
+  color: green;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1px;
+}
+
+#matchpop {
+  color: green;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin: 1px;
+}
+
+.ua {
+  color: white;
+  border: 0.5px solid white;
+  padding: 2px;
+  margin: 1px;
+  font-size: 0.5rem;
+  font-weight: 400;
+}
+
+.qlty {
+  border: 1px solid silver;
+  font-size: 0.5rem;
+  padding: 1px;
+  margin: 1px;
+  padding: 0.2rem;
+  font-weight: 400;
+}
+
+.right {
+  display: flex;
+
+  gap: 1rem;
+}
+
+.open {
+  top: 4rem;
+}
+
+.name {
+  font-weight: 900;
+  font-style: oblique;
+  color: bisque;
+}
+
+.stop-scrolling {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Container alignment */
+.right {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  color: #fff;
+}
+
+/* Unique headings for movie labels */
+.movie-info-title {
+  color: #ffb400; /* Subtle Gold/Yellow */
+  font-size: 1.1rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+}
+
+/* Unique paragraph style for the data */
+.movie-info-text {
+  color: #dfdfdf;
+  font-size: 1rem;
+}
+
+/* Year aur Rating ko ek line mein laane ke liye */
+.movie-stats-row {
+  display: flex;
+  gap: 30px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats-item {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Specific styling for rating value */
+#rating {
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.banneroverlay {
+  visibility: hidden;
+  position: fixed;
+  background:
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.7) 100%,
+
+      transparent 70%
+    ),
+    linear-gradient(to top, rgba(0, 0, 0, 1) 5%, transparent 40%);
+  height: 100vh;
+  width: 100vw;
+  z-index: 999;
+}
