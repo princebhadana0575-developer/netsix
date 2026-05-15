@@ -141,7 +141,7 @@ const sections = [
     ],
   },
   {
-    container: ".NetflixTrendings",
+    container: ".Netflixshows",
     shows: [
       {
         name: "DONT KILL ME",
