@@ -696,7 +696,6 @@ function renderShows(containerSelector, shows) {
         show.Image,
         show.name,
         show.id,
-
         show.about,
         show.age,
         show.match,
