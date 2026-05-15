@@ -1,0 +1,344 @@
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1200px) {
+  .hero-content {
+    width: 32rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .container {
+    gap: 2rem;
+  }
+
+  .item {
+    width: 260px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .sidemenu {
+    width: 10%;
+  }
+
+  .all {
+    width: 90%;
+    margin-left: 10%;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-content {
+    left: 2rem;
+    width: 28rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    flex-wrap: wrap;
+  }
+
+  .container {
+    padding: 2rem;
+  }
+
+  .item {
+    width: 220px;
+  }
+
+  .descriptions {
+    flex-direction: column;
+  }
+
+  .right {
+    flex-direction: column;
+  }
+
+  .banner {
+    width: 95%;
+    left: 2.5%;
+  }
+
+  .nav {
+    width: 85%;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .allbody {
+    flex-direction: column;
+  }
+
+  .sidemenu {
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    top: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    z-index: 99999;
+    border-top: 1px solid #222;
+  }
+
+  .sidemenuitems {
+    margin: 0;
+    font-size: 0.7rem;
+    border: none;
+  }
+
+  .sidemenuitems:hover {
+    border: none;
+  }
+
+  .sidemenuitems i {
+    font-size: 1.2rem;
+  }
+
+  .all {
+    width: 100%;
+    margin-left: 0;
+    padding-bottom: 90px;
+  }
+
+  .nav {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .opt-bar {
+    display: inline-block;
+  }
+
+  .opt-bar a {
+    display: none;
+  }
+
+  .searchbox {
+    margin-right: 0%;
+  }
+
+  .hero {
+    height: 85vh;
+  }
+
+  .overlay {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 15%,
+      rgba(0, 0, 0, 0.6) 50%,
+      transparent 100%
+    );
+  }
+
+  .hero-content {
+    width: 90%;
+    left: 1rem;
+    bottom: 2rem;
+    top: auto;
+    transform: none;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .details {
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+
+  .buttons {
+    gap: 0.5rem;
+  }
+
+  .play-btn,
+  .list-btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .info-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .heading1,
+  .headings {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .item {
+    width: 170px;
+    margin-bottom: 70px;
+  }
+
+  .item:hover {
+    transform: scale(1.05);
+  }
+
+  .panel {
+    padding: 0.5rem;
+    height: auto;
+  }
+
+  .info {
+    font-size: 0.6rem;
+  }
+
+  .category {
+    font-size: 0.5rem;
+  }
+
+  .Continue-box {
+    width: 280px;
+  }
+
+  .play-btn-banner {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .banner {
+    width: 90%;
+    left: 0;
+    height: 100vh;
+    border-radius: 0;
+    margin-left: 5%;
+  }
+
+  .banner-img {
+    height: 300px;
+  }
+
+  .banner-img img {
+    object-fit: cover;
+  }
+
+  .banner-btn {
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .banner-btn button {
+    font-size: 1rem;
+  }
+
+  .descriptions {
+    font-size: 0.5rem;
+  }
+
+  .movie-stats-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .stats-item {
+    margin-top: 0.5rem;
+  }
+
+  .end-box p {
+  font-size: .5rem;
+  text-transform: capitalize;
+}
+
+.end-box h2 {
+  font-size: 1rem;
+}
+
+.end-box h1{
+  font-size: 1rem;
+} 
+
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .hero {
+    height: 75vh;
+  }
+
+  .hero-content h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-content p {
+    font-size: 0.85rem;
+  }
+
+  .top-title {
+    font-size: 1rem;
+  }
+
+  .details {
+    font-size: 0.7rem;
+  }
+
+  .play-btn,
+  .list-btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .item {
+    width: 150px;
+  }
+
+  .Continue-box {
+    width: 230px;
+  }
+
+  .searchbox {
+    width: 120px;
+  }
+
+  .search {
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .cross {
+    width: 1.8rem;
+    height: 1.8rem;
+    font-size: 1.2rem;
+  }
+}
