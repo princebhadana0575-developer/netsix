@@ -182,7 +182,7 @@ main {
 /* HERO */
 
 .herocontainer {
-  width: 100%;
+  width: 100vw;
   display: flex;
   overflow-x: auto; /* hidden ki jagah auto ya scroll responsive ke liye */
   scroll-snap-type: x mandatory; /* Slider smooth banane ke liye */
