@@ -33,11 +33,18 @@ a {
   height: 100vh;
   position: fixed;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: first baseline;
+  align-items: center;
   gap: 2rem;
-  z-index: 999;
+  z-index: 997;
   font-weight: 700;
+}
+.sidemaenu-container {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .sidemenuitems {
@@ -53,7 +60,6 @@ a {
 }
 
 .sidemenuitems:hover {
-  border-left: 5px solid red;
   color: red;
   transform: scale(1.1);
 }
@@ -65,7 +71,7 @@ a {
 }
 
 .all {
-  width: 93%;
+  width: 100%;
 
   margin-left: 7%;
 }
@@ -78,24 +84,24 @@ main {
   justify-content: space-between;
   align-items: center;
   height: 3rem;
-  width: 90vw;
+  width: 100%;
   position: absolute;
   background: rgba(15, 15, 25, 0.75);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.4);
   z-index: 10000;
-  padding: 2rem;
 }
 
 .red-box {
   height: 90%;
-  margin-left: 1rem;
+
   border-radius: 10px;
   display: flex;
   align-items: center;
   font-size: 1.7rem;
   gap: 1rem;
+  padding: 5px;
 }
 
 .red-box img {
@@ -162,8 +168,7 @@ main {
   border: none;
   color: aliceblue;
   height: 20px;
-  width: 100%;
-  padding-left: 5px;
+  padding: 0 5px;
   outline: none;
 }
 * {
@@ -192,7 +197,7 @@ main {
 .hero {
   margin-top: 3rem;
   width: 100%; /* 100vw se better hai */
-  height: 70vh; /* Thodi height badha sakte hain better look ke liye */
+  height: 60vh; /* Thodi height badha sakte hain better look ke liye */
   position: relative;
   flex-shrink: 0;
   scroll-snap-align: start;
@@ -228,14 +233,13 @@ main {
   inset: 0;
   margin: 0;
 
-  background:
-    linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.95) 15%,
-      rgba(0, 0, 0, 0.4) 45%,
-      transparent 70%
-    ),
-    linear-gradient(to top, rgba(0, 0, 0, 1) 5%, transparent 40%);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.85) 20%,
+    rgba(0, 0, 0, 0.55) 55%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
 }
 
 /* CONTENT */
@@ -726,6 +730,10 @@ main {
   /* Ya koi specific height */
   overflow-y: scroll;
 }
+.banneroverlay {
+  width: 100vw;
+  height: 100vh;
+}
 
 .banner-img {
   background-color: #181818;
@@ -830,12 +838,6 @@ main {
   font-weight: 400;
 }
 
-.right {
-  display: flex;
-
-  gap: 1rem;
-}
-
 .open {
   top: 4rem;
 }
@@ -855,7 +857,7 @@ main {
 .right {
   display: flex;
   flex-direction: row;
-  gap: 2rem;
+  gap: 1rem;
   color: #fff;
 }
 

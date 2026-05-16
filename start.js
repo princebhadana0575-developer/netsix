@@ -25,7 +25,7 @@ function playVideo(id) {
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen>
-    </iframe>
+    </iframe>    
   `;
 }
 
@@ -559,7 +559,7 @@ const hyped = [
 
 const history = [
   {
-    id: "",
+    id: "7lRLZXmzMT8",
     name: "ELITE",
     img: "Attachments/elite.png",
 
@@ -577,7 +577,7 @@ const history = [
   },
 
   {
-    id: "",
+    id: "I7c1etV7D7g",
     name: "TITANIC",
     img: "Attachments/titanic.jpg",
 
@@ -595,7 +595,7 @@ const history = [
   },
 
   {
-    id: "",
+    id: "f27QempqWdY",
     name: "MY FAULT",
     img: "Attachments/my-fault.jpg",
 
@@ -613,7 +613,7 @@ const history = [
   },
 
   {
-    id: "",
+    id: "1ZlIaKQJY7M",
     name: "DAY DREAMER",
     img: "Attachments/daydreamer.jpg",
 
@@ -631,7 +631,7 @@ const history = [
   },
 
   {
-    id: "",
+    id: "-mjWrrKgwJM",
     name: "DOCTOR STRANGE",
     img: "Attachments/wanda.jpg",
 
@@ -649,7 +649,7 @@ const history = [
   },
 
   {
-    id: "",
+    id: "_6Ix1VF_yWM",
     name: "KRRISH 3",
     img: "Attachments/krish.jpg",
 
@@ -705,7 +705,9 @@ function renderShows(containerSelector, shows) {
         show.year,
         show.rating,
       );
+
       banneroverlay.style.visibility = "visible";
+      document.body.style.overflow = "hidden";
     });
 
     container.appendChild(div);

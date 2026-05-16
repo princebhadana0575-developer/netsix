@@ -18,6 +18,14 @@
   .item {
     width: 260px;
   }
+  .banner {
+    height: 70vh;
+  }
+
+  .banneroverlay {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 /* =========================
@@ -29,18 +37,14 @@
     width: 10%;
   }
 
-  .all {
-    width: 90%;
-    margin-left: 10%;
-  }
-
   .hero {
-    height: 60vh;
+    height: 46vh;
   }
 
   .hero-content {
     left: 2rem;
     width: 28rem;
+    top: 50%;
   }
 
   .hero-content h1 {
@@ -72,12 +76,42 @@
   }
 
   .banner {
-    width: 95%;
-    left: 2.5%;
+    height: 55%;
+  }
+  .banneroverlay {
+    width: 100vw;
+    height: 100vh;
   }
 
   .nav {
     width: 85%;
+  }
+  .sidemenu {
+    width: 100vw;
+    height: 70px;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    z-index: 99;
+    border-top: 1px solid #222;
+  }
+
+  .sidemaenu-container {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: auto;
+  }
+  .sidemenuitems {
+    font-size: 1.4rem;
+  }
+  .all {
+    width: 100%;
+    margin: 0%;
   }
 }
 
@@ -86,25 +120,34 @@
 ========================= */
 
 @media (max-width: 768px) {
-  .allbody {
-    flex-direction: column;
+  .all {
+    width: 100vw;
+    margin: 0%;
   }
 
   .sidemenu {
     width: 100vw;
-    height: 70px;
+    height: 50px;
     bottom: 0;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
-    z-index: 99999;
+    z-index: 99;
     border-top: 1px solid #222;
   }
 
+  .sidemaenu-container {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: auto;
+  }
+
   .sidemenuitems {
-    margin: 0;
-    font-size: 0.7rem;
-    border: none;
+    font-size: 0.5rem;
   }
 
   .sidemenuitems:hover {
@@ -115,14 +158,8 @@
     font-size: 1.2rem;
   }
 
-  .all {
-    width: 100%;
-    margin-left: 0;
-    padding-bottom: 90px;
-  }
-
   .nav {
-    width: 100%;
+    width: 100vw;
     padding: 0 1rem;
   }
 
@@ -145,7 +182,7 @@
 
   .hero {
     height: 50vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
     overflow: hidden;
   }
@@ -173,6 +210,32 @@
     top: 10rem;
     width: 90%;
     z-index: 2;
+  }
+  .hero-content h1 {
+    font-size: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 0.75rem;
+  }
+
+  .play-btn,
+  .list-btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.85) 30%,
+      rgba(0, 0, 0, 0.55) 55%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
   }
 
   .heading1,
@@ -216,44 +279,6 @@
     font-size: 0.9rem;
   }
 
-  .banner {
-    width: 90%;
-    left: 0;
-    height: 100vh;
-    border-radius: 0;
-    margin-left: 5%;
-  }
-
-  .banner-img {
-    height: 300px;
-  }
-
-  .banner-img img {
-    object-fit: cover;
-  }
-
-  .banner-btn {
-    left: 10px;
-    bottom: 10px;
-  }
-
-  .banner-btn button {
-    font-size: 1rem;
-  }
-
-  .descriptions {
-    font-size: 0.5rem;
-  }
-
-  .movie-stats-row {
-    flex-direction: column;
-    gap: 0;
-  }
-
-  .stats-item {
-    margin-top: 0.5rem;
-  }
-
   .end-box p {
     font-size: 0.5rem;
     text-transform: capitalize;
@@ -266,6 +291,13 @@
   .end-box h1 {
     font-size: 1rem;
   }
+  .bannercontainer .hero-content {
+    top: 8rem;
+  }
+
+  .bannercontainer .hero-content p {
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* =========================
@@ -273,16 +305,19 @@
 ========================= */
 
 @media (max-width: 480px) {
+  .all {
+    width: 100%;
+  }
   .hero {
-    height: 75vh;
+    height: 47vh;
   }
 
   .hero-content h1 {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 
   .hero-content p {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
   }
 
   .top-title {
@@ -323,5 +358,21 @@
     width: 1.8rem;
     height: 1.8rem;
     font-size: 1.2rem;
+  }
+  .banner {
+    height: 48%;
+  }
+  .bannercontainer .hero-content {
+    top: 6rem;
+  }
+
+  .bannercontainer .hero-content p {
+    margin-bottom: 0px;
+  }
+  .bannercontainer .hero-content h1 {
+    padding: 10px 0;
+  }
+  .bannercontainer .hero-content .details {
+    margin-bottom: 0.5rem;
   }
 }
