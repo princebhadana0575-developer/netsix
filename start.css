@@ -71,8 +71,7 @@ a {
 }
 
 .all {
-  width: 100%;
-
+  width: 93%;
   margin-left: 7%;
 }
 main {
@@ -84,7 +83,7 @@ main {
   justify-content: space-between;
   align-items: center;
   height: 3rem;
-  width: 100%;
+  width: 93%;
   position: absolute;
   background: rgba(15, 15, 25, 0.75);
   backdrop-filter: blur(14px);
@@ -95,6 +94,7 @@ main {
 
 .red-box {
   height: 90%;
+  margin-right: 1rem;
 
   border-radius: 10px;
   display: flex;

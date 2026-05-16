@@ -99,7 +99,9 @@ button {
     justify-content: center;
     gap: 10px;
   }
-
+  .logo {
+    font-size: 2rem;
+  }
   html {
     font-size: 13px;
   }
@@ -207,7 +209,7 @@ button {
 .mov-sel {
   cursor: pointer;
   border: 2px solid black;
-  height:;
+
   width: 350px;
   flex-shrink: 0;
   margin: 20px 10px;
